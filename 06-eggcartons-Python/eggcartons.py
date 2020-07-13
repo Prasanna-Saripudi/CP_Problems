@@ -5,7 +5,8 @@
 # author: Prasanna Saripudi
 
 def fun_eggcartons(eggs):
-    cartons = eggs // 12
-    if eggs / 12 > 0:
+    cartons = eggs % 12
+    print(cartons)
+    if (eggs / 12) > 0:
         cartons += 1
     return cartons
