@@ -14,7 +14,8 @@ with them:
 "monocle" = 5
 Everything else has 0 points.
 Use the test cases below to guide you!"""
-#author: Prasanna Saripudi
+# author: Prasanna Saripudi
+
 
 class Classy(object):
     def __init__(self):
