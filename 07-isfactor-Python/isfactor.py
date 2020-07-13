@@ -2,8 +2,10 @@
 # two int values f and n, and returns True 
 # if f is a factor of n, and False otherwise. 
 # Note that every integer is a factor of 0.
-
+#author: Prasanna Saripudi
 
 
 def fun_isfactor(f, n):
+	if n % f == 0:
+		return True
 	return False # replace with your solution
