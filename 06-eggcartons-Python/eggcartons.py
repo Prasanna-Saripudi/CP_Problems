@@ -7,7 +7,7 @@
 def fun_eggcartons(eggs):
     # cartons needed for total eggs
     cartons = eggs // 12
-    # checing for rem eggs
+    # checking for rem eggs
     if (eggs % 12) > 0:
         cartons += 1
     return cartons
