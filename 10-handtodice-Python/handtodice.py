@@ -8,5 +8,11 @@
 
 def handtodice(hand):
     # converting dat as string to access numbers
-    hand = str(hand)
-    return (int(hand[0]), int(hand[1]), int(hand[2]))
+    # hand = str(hand)
+    # return (int(hand[0]), int(hand[1]), int(hand[2]))
+    temp = 0
+    result = []
+    while temp < 3:
+        result.append(hand//10**temp % 10)
+        temp += 1
+    return tuple(result)
