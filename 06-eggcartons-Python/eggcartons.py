@@ -5,8 +5,9 @@
 # author: Prasanna Saripudi
 
 def fun_eggcartons(eggs):
-    cartons = eggs % 12
-    print(cartons)
-    if (eggs / 12) > 0:
+    # cartons needed for total eggs
+    cartons = eggs // 12
+    # checing for rem eggs
+    if (eggs % 12) > 0:
         cartons += 1
     return cartons
