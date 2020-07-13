@@ -4,7 +4,13 @@
 # otherwise. Note from the triangle inequality that the sum of each two sides must be greater
 # than the third side, and further note that all sides of a legal triangle must be positive. Hint:
 # how can you determine the longest side, and how might that help?
+# author: Prasanna Saripudi
 
 def islegaltriangle(s1, s2, s3):
-	# your code goes here
-	pass
+    sides = [s1, s2, s3]
+    maxSideInd = sides.index(max(sides))
+    remSides = [i for i in [0, 1, 2] if i != maxSideInd]
+	# checking if largestside is lessthanthesumofrem2sides; TRUE
+    if sides[remSides[0]] + sides[remSides[1]] > sides[maxSideInd]:
+        return True
+    return False
