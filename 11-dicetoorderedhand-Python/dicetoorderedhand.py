@@ -10,12 +10,12 @@
 # assert(dicetoorderedhand(2,2,2) == 222)
 # Hint: You can use max(a,b,c) to find the largest of 3 values, and
 # min(a,b,c) to find the smallest.
-#author: Prasanna Saripudi
+# author: Prasanna Saripudi
 
 def dicetoorderedhand(a, b, c):
-	maxVal = max(a, b, c)
-	minVal = min(a, b, c)
-	midVal = list(set([a, b, c]) - {maxVal, minVal})[0]
-	result = maxVal * 100 + midVal*10+minVal
-	
-	
+    hand = [a, b, c]
+    maxInd = hand.index(max(hand))
+    minInd = hand.index(min(hand))
+    midInd = [ind for ind in [maxInd, minInd] if ind not in hand][0]
+    result = hand[maxInd] * 100 + hand[midInd] * 10 + hand[minInd]
+    return result
