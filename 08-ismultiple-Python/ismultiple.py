@@ -6,8 +6,9 @@
 
 
 def fun_ismultiple(m, n):
+    # 7 * 2 = 14 ; 7, 2 are factors of 14; 14 is a multiple of 7, 2
     if n == 0 and m != 0:
         return False
     elif m == 0 or m % n == 0:
         return True
-    return False  # replace with your solution
+    return False
