@@ -2,10 +2,10 @@
 # that takes four int values x1, y1, x2, y2
 # that represent the two points (x1, y1) and (x2, y2),
 # and returns the distance between those points as a int.
-
+# author: Prasanna Saripudi
 import math
 
 
 def fun_distance(x1, y1, x2, y2):
     # formula sqrt((x2-x2)^2+(y2-y1)^2)
-    return math.sqrt(((x2-x1)**2)+((y2-y1)**2))
+    return int(math.sqrt(((x2-x1)**2)+((y2-y1)**2)))
