@@ -30,8 +30,25 @@
 # author: Prasanna Saripudi
 
 def playstep2(hand, dice):
-
-    pass
+    hand1 = list(handtodice(hand))
+    temp = 0
+    # checking if there are matching and then removing the other
+    for x in hand1:
+        if hand1.count(x) > 1:
+            hand1 = [val for val in hand1 if val == x]
+    temp = 3-len(hand1)
+    # if no match, remove other than highest
+    if len(hand1) == 3:
+        hand1 = [max(hand1)]
+        temp = 3-len(hand1)
+    # adding dice value to hand
+    while temp > 0:
+        y = dice % 10
+        dice //= 10
+        hand1.append(y)
+        temp -= 1
+    print(dicetoorderedhand(hand1[0], hand1[1], hand1[2]), dice)
+    return (dicetoorderedhand(hand1[0], hand1[1], hand1[2]), dice)
 
 
 def handtodice(hand):
@@ -43,6 +60,6 @@ def dicetoorderedhand(a, b, c):
     hand = [a, b, c]
     maxInd = hand.index(max(hand))
     minInd = hand.index(min(hand))
-# finding the middle element
+    # finding the middle element
     midInd = [ind for ind in [0, 1, 2] if ind not in [maxInd, minInd]][0]
     return hand[maxInd] * 100 + hand[midInd] * 10 + hand[minInd]
