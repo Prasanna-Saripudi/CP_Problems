@@ -7,7 +7,8 @@
 
 def isevenpositiveint(x):
     # checking type, positive, even
-    if type(x) is int:
+    # print(x, type(x))
+    if isinstance(x, int):
         if x > 0 and x % 2 == 0:
             return True
     return False
