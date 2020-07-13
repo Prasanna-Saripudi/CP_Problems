@@ -14,8 +14,9 @@
 
 def dicetoorderedhand(a, b, c):
     hand = [a, b, c]
+    # getting index of max, min elements
     maxInd = hand.index(max(hand))
     minInd = hand.index(min(hand))
-    midInd = [ind for ind in [maxInd, minInd] if ind not in hand][0]
-    result = hand[maxInd] * 100 + hand[midInd] * 10 + hand[minInd]
-    return result
+    # finding the middle element
+    midInd = [ind for ind in [0, 1, 2] if ind not in [maxInd, minInd]][0]
+    return hand[maxInd] * 100 + hand[midInd] * 10 + hand[minInd]
