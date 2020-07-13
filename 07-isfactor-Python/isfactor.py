@@ -4,10 +4,9 @@
 # Note that every integer is a factor of 0.
 # author: Prasanna Saripudi
 
-
 def fun_isfactor(f, n):
     if f == 0 and n != 0:
         return False
     elif n == 0 or n % f == 0:
         return True
-    return False  # replace with your solution
+    return False
