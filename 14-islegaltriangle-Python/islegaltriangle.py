@@ -10,7 +10,7 @@ def islegaltriangle(s1, s2, s3):
     sides = [s1, s2, s3]
     maxSideInd = sides.index(max(sides))
     remSides = [i for i in [0, 1, 2] if i != maxSideInd]
-	# checking if largestside is lessthanthesumofrem2sides; TRUE
+    # checking if largestside is lessthanthesumofrem2sides; TRUE
     if sides[remSides[0]] + sides[remSides[1]] > sides[maxSideInd]:
         return True
     return False
