@@ -4,7 +4,9 @@
 # assert(handToDice(214) == (2,1,4))
 # assert(handToDice(422) == (4,2,2))
 # Hint: You might find // and % useful here, and also getKthDigit().
+# author: Prasanna Saripudi
 
 def handtodice(hand):
-	# your code goes here
-	pass
+    # converting dat as string to access numbers
+    hand = str(hand)
+    return (int(hand[0]), int(hand[1]), int(hand[2]))
