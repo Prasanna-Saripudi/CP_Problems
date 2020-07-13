@@ -27,7 +27,22 @@
 # Hint: Then, you may wish to use diceToOrderedHand(a, b, c) at the end to convert the 3 dice back
 # into a sorted hand.
 # Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
+# author: Prasanna Saripudi
 
 def playstep2(hand, dice):
-	# your code goes here
-	pass
+
+    pass
+
+
+def handtodice(hand):
+    hand = str(hand)
+    return (int(hand[0]), int(hand[1]), int(hand[2]))
+
+
+def dicetoorderedhand(a, b, c):
+    hand = [a, b, c]
+    maxInd = hand.index(max(hand))
+    minInd = hand.index(min(hand))
+# finding the middle element
+    midInd = [ind for ind in [0, 1, 2] if ind not in [maxInd, minInd]][0]
+    return hand[maxInd] * 100 + hand[midInd] * 10 + hand[minInd]
