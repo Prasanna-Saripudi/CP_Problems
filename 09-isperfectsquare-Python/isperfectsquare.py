@@ -5,14 +5,13 @@
 # author: Prasanna Saripudi
 import math
 
-# considered
-
-
+# perfect squares are the squares of whole numbers like 1,4,9,16, etc
+# for the '100' case, need to check if dat string can b a number
 def isperfectsquare(n):
-    if not isinstance(n, str):
+    if not isinstance(n, str) or n.isdigit():
         if n >= 0:
             root = math.sqrt(n)
             print(root)
-            if root ** 2 == n and type(root) is int:
+            if root ** 2 == n and '0' is str(root)[-1]:
                 return True
     return False
