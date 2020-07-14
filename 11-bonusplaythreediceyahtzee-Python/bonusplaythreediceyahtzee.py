@@ -47,20 +47,14 @@ def bonusplaythreediceyahtzee(dice):
     for x in str(hand):
         if (str(hand).count(x) == 3):
             return (hand, 20 + (int(x) * 3))
-    print(hand, dice)
     hand, dice = playstep2(hand, dice)
-    print(hand, dice)
     hand, dice = playstep2(hand, dice)
-    print(hand, dice)
     h = list(handtodice(hand))
     for x in h:
         if h.count(x) == 3:
-            print(hand, 20 + (x * 3))
             return (hand, 20 + (x * 3))
         elif h.count(x) == 2:
-            print(hand, 10 + (x * 2))
             return (hand, 10 + (x * 2))
-    print(hand, max(h))
     return (hand, max(h))
 
 
