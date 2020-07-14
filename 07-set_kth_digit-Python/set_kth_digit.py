@@ -11,13 +11,12 @@ def fun_set_kth_digit(n, k, d):
     if n < 0:
         flag = False
     n = abs(n)
-    if k > len(str(n)):
+    if k >= len(str(n)):
         n += d * (10 ** k)
     elif k < len(str(n)) and k >= 0:
         temp = str(n)
-        temp[len(temp)-1-k] = d
+        temp = temp[:len(temp)-1-k] + str(d)+temp[len(temp)-k:]
         n = int(temp)
     if not flag:
         n = -n
-    print(n)
     return n
