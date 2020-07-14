@@ -3,18 +3,13 @@ Fibonacci sequence value.
 Your code should have the same input/output as the 
 iterative code in the instructions."""
 # author: Prasanna Saripudi
-# 0 1 2 3 5 8 13 21 34
-
+# 0 1 1 2 3 5 8 13 21 34 55 89
+# 0 1 2 3 4 5 6  7  8  9 10 11
 
 def get_fib(position):
-    if position in [0, 1]:
+    if position==0:
         return 0
-    elif position == 2:
+    elif position == 1:
         return 1
-    else:
-        x = get_fib(position - 1)
-        y = get_fib(position-2)
-        s = x + y
-        print(x, y)
-        print(position - 1, position-2, s)
-        return s
+    s = get_fib(position - 1) + get_fib(position-2)
+    return s
