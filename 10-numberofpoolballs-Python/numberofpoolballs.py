@@ -8,7 +8,8 @@
 # number of rows. For this problem and the next, you should research Triangular Numbers.
 # author: Prasanna Saripudi
 
+# sum of natural numbers until that number
+# formula for n, n*(n+1)/2
 def numberofpoolballs(rows):
     balls = (rows * (rows + 1)) // 2
-    print(balls)
     return balls
