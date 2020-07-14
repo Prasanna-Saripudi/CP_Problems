@@ -9,6 +9,6 @@
 # author: Prasanna Saripudi
 
 def numberofpoolballs(rows):
-    balls = (rows * rows + 1) // 2
+    balls = (rows * (rows + 1)) // 2
     print(balls)
     return balls
