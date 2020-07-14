@@ -7,8 +7,12 @@ import math
 
 # perfect squares are the squares of whole numbers like 1,4,9,16, etc
 # for the '100' case, need to check if dat string can b a number
+
+
 def isperfectsquare(n):
     if not isinstance(n, str) or n.isdigit():
+        if isinstance(n, str):
+            n = int(n)
         if n >= 0:
             root = math.sqrt(n)
             print(root)
