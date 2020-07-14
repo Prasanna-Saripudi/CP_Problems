@@ -5,6 +5,7 @@ insert_first, delete_first, push, and pop.
 Think about this while you're implementing:
 why is it easier to add an "insert_first"
 function than just use "append"?"""
+# author: Prasanna Saripudi
 
 
 class Element(object):
@@ -38,7 +39,7 @@ class LinkedList(object):
     def delete_first(self):
         "Delete the first (head) element in the LinkedList as return it"
         if self.head:
-            val = self.head.value
+            val = self.head
             self.head = self.head.next
             return val
         return None
