@@ -16,6 +16,6 @@ def isperfectsquare(n):
         if n >= 0:
             root = math.sqrt(n)
             print(root)
-            if root ** 2 == n and '0' is str(root)[-1]:
+            if root ** 2 == n and '0' == str(root)[-1]:
                 return True
     return False
