@@ -1,23 +1,26 @@
 # fabricyards(inches)
-# Fabric must be purchased in whole yards, so purchasing just 1 inch 
-# of fabric requires purchasing 1 entire yard. With this in mind, 
-# write the function fabricYards(inches) that takes the number of 
-# inches of fabric desired, and returns the smallest number of whole 
+# Fabric must be purchased in whole yards, so purchasing just 1 inch
+# of fabric requires purchasing 1 entire yard. With this in mind,
+# write the function fabricYards(inches) that takes the number of
+# inches of fabric desired, and returns the smallest number of whole
 # yards of fabric that must be purchased.
 
 # fabricexcess(inches)
-# Write the function fabricExcess(inches) that takes the number of 
-# inches of fabric desired and returns the number of inches of excess 
+# Write the function fabricExcess(inches) that takes the number of
+# inches of fabric desired and returns the number of inches of excess
 # fabric that must be purchased (as purchases must be in whole yards)
 # . Hint: you may want to use fabricYards, which you just wrote!
-
+# author: Prasanna Saripudi
 
 def fun_fabricyards(inches):
-	# your code goes here
-	return 1
+    # 1 yard = 36 inches
+    yards = inches // 36
+    if inches % 36 > 0:
+        yards += 1
+    return yards
+
 
 def fun_fabricexcess(inches):
-	# your code goes here
-	return 1
-
-
+    yards = fun_fabricyards(inches)
+    excess = yards*36 - inches
+    return excess
