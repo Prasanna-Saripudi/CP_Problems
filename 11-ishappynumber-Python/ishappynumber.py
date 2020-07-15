@@ -18,8 +18,6 @@
 def ishappynumber(n):
     if n == 1:
         return True
-        if n == 1:
-            return True
     sum = n
     while sum > 9:
         sum = sumSquares(sum)
