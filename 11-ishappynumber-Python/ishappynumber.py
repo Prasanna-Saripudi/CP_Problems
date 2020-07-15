@@ -21,7 +21,6 @@ def ishappynumber(n):
     sum = n
     while sum > 9:
         sum = sumSquares(sum)
-        print(sum)
         if sum == 1:
             return True
     return False
