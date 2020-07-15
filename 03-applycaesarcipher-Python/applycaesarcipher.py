@@ -16,12 +16,10 @@ def fun_applycaesarcipher(msg, shift):
     for x in msg:
         if x.isalpha():
             if x.islower():
-                print(msg.index(x), msg.index(x) +
-                      shift, msg[msg.index(x) + shift])
-                c = msg[msg.index(x) + shift]
+                c = alphabets[alphabets.index(x) + shift]
                 result.append(c)
             elif x.isupper():
-                c = msg[msg.index(x.lower()) + shift].upper()
+                c = alphabets[alphabets.index(x.lower()) + shift].upper()
                 result.append(c)
         else:
             result.append(x)
