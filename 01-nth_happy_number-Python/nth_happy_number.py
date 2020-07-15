@@ -18,13 +18,11 @@ def fun_nth_happy_number(n):
         num += 1
         if (isHappy(num)):
             count += 1
-            print(num)
-        if count == n:
-            return num
     return num
 
 
 def isHappy(num):
+    # if the sum value repeats , then it isnt happy number
     visited = set()
     while num != 1:
         num = sum(int(x) ** 2 for x in str(num))
