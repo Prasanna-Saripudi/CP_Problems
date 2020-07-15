@@ -5,6 +5,7 @@
 
 
 def fun_nth_happy_prime(n):
+    print("sdd")
     count = 0
     num = 1
     while count <= n:
