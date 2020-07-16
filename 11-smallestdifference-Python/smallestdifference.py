@@ -7,11 +7,11 @@
 
 def smallestdifference(a):
     if len(a) == 0:
-        return - 1
-    diff = a[0]
-    for i in range(len(a)):
-        for j in range(i, len(a)):
-            calc = abs(a[i]) - abs(a[j])
+        return -1
+    diff = 10 ** 20
+    for i in range(len(a)-1):
+        for j in range(i+1, len(a)):
+            calc = abs(a[i] - a[j])
             if calc < diff:
                 diff = calc
     return diff
