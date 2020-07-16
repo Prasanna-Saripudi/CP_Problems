@@ -4,10 +4,16 @@
 // Return the string with "return".
 // You can only have the string once in your code.
 // Don't just copy/paste it 5 times into a single variable!
+// author: Prasanna Saripudi
 
 public class PythonBasics {
 	public String show_excitement() {
-		return "I am super excited for this course! ".repeat(5);
+		// str.repeat(n) not working for java8;only avai for java 11
+		String s = "";
+		for (int i = 0; i < 5; i++) {
+			s += "I am super excited for this course! ";
+		}
+		return s;
 	}
 
 	public static void main(String args[]) {
