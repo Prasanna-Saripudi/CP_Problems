@@ -7,7 +7,7 @@
 # author: Prasanna Saripudi
 
 def issorted(a):
-    if len(a) == 0:
+    if len(a) in [0, 1]:
         return True
     if a[0] >= a[1]:
         flag = True
