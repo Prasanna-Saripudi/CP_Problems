@@ -6,7 +6,7 @@
 # author: Prasanna Saripudi
 
 # for o(nlogn)=> can sort initially with o(logn) and then with o(n) compare the sorted consec for min diff
-# this takes o(n^2)
+# o(n^2) would be to iterate using 2 loops
 
 def smallestdifference(a):
     if len(a) == 0:
