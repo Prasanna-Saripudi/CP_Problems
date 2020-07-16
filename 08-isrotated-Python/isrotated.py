@@ -7,6 +7,7 @@
 def isrotated(str1, str2):
     val = 0
     while val < len(str1):
+        # checking for left, right rotation
         if str1[val:] + str1[:val] == str2 or str1[len(str1)-val:]+str1[:len(str1)-val] == str2:
             return True
         val += 1
