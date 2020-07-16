@@ -18,8 +18,10 @@
 
 def matrixadd(L, M):
     if len(L) == len(M):
-        flag = [True if len(L[l]) == len(
-            M[l]) else False for l in range(len(L))][0]
+        flag = True
+        for x in range(len(L)):
+            if len(L[x]) != len(M[x]):
+                flag = False
         if flag:
             result = [[L[i][j] + M[i][j]
                        for j in range(len(L[0]))] for i in range(len(L))]
