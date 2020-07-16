@@ -7,24 +7,16 @@
 
 def fun_replace(s1, s2, s3):
     freq = s1.count(s2)
+    # returning the s1 if no matches
     if freq == 0:
         return s1
-    elif freq == 1:
-        index = s1.index(s2)
-        return s1[:index] + s3 + s1[index + len(s2):]
+        # if matches, finding the indexes of matches
     indexes = [i for i in range(len(s1) - len(s2) + 1) if s1.startswith(s2, i)]
-    print(indexes)
     j = indexes[0]
+    # replacing s3 in s1 for all matches of s2
     for i in range(len(indexes)):
-        print(s1, j, indexes[i])
         s1 = s1[:j] + s3 + s1[j + len(s2):]
         if i == len(indexes)-1:
             break
         j = indexes[i + 1] + len(s3) - len(s2)
     return s1
-
-# for i in range(len(s1) - len(s2)+1):
-#     print(s1[i: i + len(s2)], s2)
-#     if s1[i: i + len(s2)] == s2:
-#         return s1[:i]+s3+s1[i+len(s2):]
-# return s1
