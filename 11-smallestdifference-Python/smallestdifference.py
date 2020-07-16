@@ -5,7 +5,12 @@
 # The two closest numbers in that list are 2 and 6, and their difference is 4.
 # author: Prasanna Saripudi
 
+# for o(nlogn)=> can sort initially with o(logn) and then with o(n) compare the sorted consec for min diff
+# this takes o(n^2)
+
 def smallestdifference(a):
+    if len(a) == 0:
+        return -1
     diff = 10 ** 20
     for i in range(len(a)-1):
         for j in range(i+1, len(a)):
