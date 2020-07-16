@@ -6,8 +6,6 @@
 # author: Prasanna Saripudi
 
 def smallestdifference(a):
-    if len(a) == 0:
-        return -1
     diff = 10 ** 20
     for i in range(len(a)-1):
         for j in range(i+1, len(a)):
