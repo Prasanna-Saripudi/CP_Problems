@@ -13,6 +13,7 @@ class vowelscount {
 			if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
 				capVowels++;
 		}
+		System.out.println(count);
 		if (count == 0)
 			return capVowels;
 		return count;
