@@ -12,6 +12,7 @@ doesn't exist in the list."""
 # author: Prasanna Saripudi
 
 # in python can directly do that by checking if its there and fetching the index of that elemnt
+# binary search, is by comparing the search element with mid and cotinues
 
 
 def binary_search(input_array, value):
