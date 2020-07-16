@@ -9,12 +9,10 @@
 def issorted(a):
     if len(a) in [0, 1]:
         return True
-    if a[0] >= a[1]:
-        flag = True
-    else:
-        flag = False
+    flag = True if a[0] >= a[1] else False
     val = a[0]
     for i in a[1:]:
+        # checking if it is desc or ascen both, if not false
         if (flag and val >= i) or (not flag and val <= i):
             val = i
         else:
