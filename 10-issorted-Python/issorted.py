@@ -7,9 +7,15 @@
 # author: Prasanna Saripudi
 
 def issorted(a):
+    if len(a) == 0:
+        return True
+    if a[0] >= a[1]:
+        flag = True
+    else:
+        flag = False
     val = a[0]
     for i in a[1:]:
-        if val < i:
+        if (flag and val >= i) or (not flag and val <= i):
             val = i
         else:
             return False
