@@ -13,11 +13,16 @@ def fun_replace(s1, s2, s3):
         index = s1.index(s2)
         return s1[:index] + s3 + s1[index + len(s2):]
     indexes = [i for i in range(len(s1) - len(s2) + 1) if s1.startswith(s2, i)]
+    print(indexes)
     j = indexes[0]
-    for i in indexes[1:]:
+    for i in range(len(indexes)):
+        print(s1, j, indexes[i])
         s1 = s1[:j] + s3 + s1[j + len(s2):]
-        j += i
+        if i == len(indexes)-1:
+            break
+        j = indexes[i + 1] + len(s3) - len(s2)
     return s1
+
 # for i in range(len(s1) - len(s2)+1):
 #     print(s1[i: i + len(s2)], s2)
 #     if s1[i: i + len(s2)] == s2:
