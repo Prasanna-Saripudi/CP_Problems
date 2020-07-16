@@ -6,6 +6,8 @@
 
 
 def fun_replace(s1, s2, s3):
+    # return s1.replace(s2, s3)
+
     freq = s1.count(s2)
     # returning the s1 if no matches
     if freq == 0:
