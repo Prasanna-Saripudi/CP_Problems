@@ -1,8 +1,8 @@
-
+import pytest
+from smallestdifference import smallestdifference
 import os,sys
 sys.path.append(os.getcwd())
-from smallestdifference import smallestdifference
-import pytest
+
 
 
 @pytest.mark.parametrize("input_value, result",[
