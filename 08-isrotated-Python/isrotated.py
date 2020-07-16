@@ -5,9 +5,9 @@
 # author: Prasanna Saripudi
 
 def isrotated(str1, str2):
-    val, str1, str2 = 0, str(str1), str(str2)
+    val = 0
     while val < len(str1):
-        if str1[val:] + str1[:val] == str2:
+        if str1[val:] + str1[:val] == str2 or str1[len(str1)-val:]+str1[:len(str1)-val] == str2:
             return True
         val += 1
     return False
