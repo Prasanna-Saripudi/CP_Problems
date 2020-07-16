@@ -12,9 +12,14 @@ def smallestdifference(a):
     if len(a) == 0:
         return -1
     diff = 10 ** 20
-    for i in range(len(a)-1):
-        for j in range(i+1, len(a)):
-            calc = abs(a[i] - a[j])
-            if calc < diff:
-                diff = calc
+    a.sort()
+    for x in range(len(a) - 1):
+        if abs(a[x + 1] - a[x]) < diff:
+            diff = abs(a[x + 1] - a[x])
     return diff
+    # for i in range(len(a)-1):
+    #     for j in range(i+1, len(a)):
+    #         calc = abs(a[i] - a[j])
+    #         if calc < diff:
+    #             diff = calc
+    # return diff
