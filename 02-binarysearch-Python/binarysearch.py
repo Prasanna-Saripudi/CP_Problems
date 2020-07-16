@@ -11,6 +11,8 @@ Return the index of value, or -1 if the value
 doesn't exist in the list."""
 # author: Prasanna Saripudi
 
+# in python can directly do that by checking if its there and fetching the index of that elemnt
+
 
 def binary_search(input_array, value):
     low = 0
