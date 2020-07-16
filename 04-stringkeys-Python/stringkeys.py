@@ -7,7 +7,6 @@ using the first two letters of the string."""
 class HashTable(object):
     def __init__(self):
         self.table = [None] * 10000
-        print("object created")
 
     def store(self, string):
         """Input a string that's stored in 
@@ -20,8 +19,7 @@ class HashTable(object):
         string is already in the table.
         Return -1 otherwise."""
         if string in self.table:
-            hash = self.calculate_hash_value(string)
-            return hash
+            return self.calculate_hash_value(string)
         return -1
 
     def calculate_hash_value(self, string):
