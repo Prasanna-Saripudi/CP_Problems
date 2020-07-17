@@ -5,22 +5,18 @@ Output a sorted list."""
 
 
 def quicksort(array):
-    quicksort(array, 0, len(array))
+    quicksort1(array, 0, len(array)-1)
     return array
 
-# recursive function continues until sorted
-
-
-def quicksort(array, low, high):
+def quicksort1(array, low, high):
+	# recursive function continues until sorted
     if low < high:
         parted = partition(array, low, high)
-        quicksort(array, low, parted - 1)
-        quicksort(array, parted+1, high)
-
-# parts the array based on pivot and returns the parted value
-
+        quicksort1(array, low, parted - 1)
+        quicksort1(array, parted+1, high)
 
 def partition(array, low, high):
+	# parts the array based on pivot and returns the parted value
     # taking first elemnt as pivot
     pivot = array[low]
     start = low + 1
@@ -34,5 +30,5 @@ def partition(array, low, high):
             array[start], array[end] = array[end], array[start]
         else:
             break
-    array[low], array[end] = array[end], array[start]
+    array[low], array[end] = array[end], array[low]
     return end
