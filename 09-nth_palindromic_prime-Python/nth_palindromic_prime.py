@@ -17,7 +17,7 @@ def fun_nth_palindromic_prime(n):
 
 
 def isPrime(num):
-    # checking if prime or not, can also do via sieve of erosthenes
+    # checking if prime or not
     if num <= 1:
         return False
     for i in range(2, (num // 2) + 1):
