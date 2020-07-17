@@ -15,7 +15,7 @@ def fun_isfactorish(n):
     n = abs(n)
     if len(str(n)) == 3:
         for x in str(n):
-            if not isFactor(int(x), n) and str(n).count(x) > 1:
+            if not isFactor(int(x), n) or str(n).count(x) > 1:
                 return False
         return True
     return False
