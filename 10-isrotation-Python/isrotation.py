@@ -7,5 +7,8 @@
 # author: Prasanna Saripudi
 
 def isrotation(x, y):
-    # Your code goes here
-    pass
+    s1, s2 = str(x), str(y)
+    for i in len(s1):
+        if s1[i:] + s1[:i] == s2 or s1[len(s1) - i:] + s1[:len(s1) - i] == s2:
+            return True
+    return False
