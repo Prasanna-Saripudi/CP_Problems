@@ -14,8 +14,8 @@ def findzerowithbisection(x, epsilon):
     high = x
     guess = 0
     while True:
-        guess = (low + high) / 2
-        diff = (guess ** 2) - number
+        guess = (low + high) / 2.0
+        diff = (guess ** 2) - x
         if abs(diff) <= epsilon:
             break
         if diff < 0:
