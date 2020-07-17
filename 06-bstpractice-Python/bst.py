@@ -12,7 +12,7 @@ class BST(object):
         self.root = Node(root)
 
     def insert(self, new_val):
-        self.insert(self.root, new_val)
+        self.insert1(self.root, new_val)
 
     def insert1(self, root, new_val):
         if root:
