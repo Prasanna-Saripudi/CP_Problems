@@ -27,3 +27,6 @@ def fun_wordwrap(s, n):
             result += s[i:]+'\n'
             break
     return result.replace(" ", "-").rstrip('\n')
+    # could also use textwrapper to split based on a width
+    # wrapper = textwrap.TextWrapper(width=n)
+    # s_list = wrapper.wrap(text=s.strip())
