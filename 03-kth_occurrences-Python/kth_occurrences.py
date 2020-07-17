@@ -14,6 +14,6 @@ def fun_kth_occurrences(s, n):
             dict[c].append(x)
         else:
             dict[c] = [x]
-        counts.sort(reverse=True)
-        freq = counts[n-1]
+    counts.sort(reverse=True)
+    freq = counts[n-1]
     return dict[freq][0]
