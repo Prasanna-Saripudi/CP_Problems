@@ -1,3 +1,4 @@
+# author: Prasanna Saripudi
 class Node(object):
     def __init__(self, value):
         self.value = value
@@ -46,4 +47,3 @@ class BinaryTree(object):
             print(str(start.value) + " ")
             self.preorder_print(start.left)
             self.preorder_print(start.right)
-        
