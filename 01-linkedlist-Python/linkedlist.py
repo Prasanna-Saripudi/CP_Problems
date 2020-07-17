@@ -69,5 +69,4 @@ class LinkedList(object):
         while current.value != value:
             prev = current
             current = current.next
-        if current.next:
-            prev.next = current.next
+        prev.next = current.next
