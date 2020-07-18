@@ -7,18 +7,14 @@
 # lookAndSay([3,3,8,-10,-10,-10]) == [(2,3),(1,8),(3,-10)]
 # lookAndSay([3,3,8,3,3,3,3]) == [(2,3),(1,8),(4,3)]
 # author: Prasanna Saripudi
-from collections import OrderedDict
-
 
 def lookandsay(a):
-    # can consider using ordered sets for having the sets in an order
-    # from ordered_set import OrderedSet;os = OrderedSet(list)
-    dict = OrderedDict()
     final = []
-    for val in a:
-        if val not in dict.keys():
-            c = a.count(val)
-            dict[val] = a.count(val)
-    for key, value in dict.items():
-        final.append((value, key))
+    start, end, i = 0, 0, 0
+    while i < len(a):
+        while end < len(a) and a[start] == a[end]:
+            end += 1
+        final.append((end - start, a[start]))
+        start = end
+        i = end
     return final
