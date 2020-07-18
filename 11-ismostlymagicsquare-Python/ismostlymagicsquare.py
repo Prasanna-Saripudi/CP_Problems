@@ -25,6 +25,6 @@ def ismostlymagicsquare(a):
         diag1.append(x[c])
         diag2.append(x[size - 1 - c])
         c += 1
-    if sum(diag1) != frstSum or sum(diag2 != frstSum):
+    if sum(diag1) != frstSum or sum(diag2) != frstSum:
         return False
     return True
