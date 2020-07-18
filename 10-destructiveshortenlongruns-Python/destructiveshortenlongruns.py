@@ -16,7 +16,7 @@
 def destructiveshortenlongruns(L, k):
     start, end, i = 0, 0, 0
     while i < len(L):
-        while end < len(a) and L[start] == L[end]:
+        while end < len(L) and L[start] == L[end]:
             end += 1
         if end - start > k:
             index = (end - start) % k
