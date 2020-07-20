@@ -15,6 +15,7 @@ def fixmostlymagicsquare(L):
     for i in range(le):
         for j in range(le):
             columns[j] += L[i][j]
+	# found the odd value and the has to be be sum value
     for j in rows:
         if rows.count(j) == 1:
             odd = j
@@ -22,5 +23,6 @@ def fixmostlymagicsquare(L):
             val = j
     index1 = rows.index(odd)
     index2 = columns.index(odd)
+	# replacing in positions
     L[index1][index2] -= odd-val
     return L
