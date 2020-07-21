@@ -17,14 +17,18 @@
 def recursion_secondlargest(L):
     if len(L) < 2:
         return None
+    elif len(L) == 2:
+        return min(L)
     return rec_secLarge(L, 0, max(L[0], L[1]), min(L[0], L[1]))
 
 
 def rec_secLarge(listi, index, first, second):
     if index >= len(listi):
         return second
-        x = listi[index]
-        y = 0 if index+1 == len(listi) else listi[index+1]
-    first = max(x, y, first, second)
-    second = max([x, y, first, second].remove(first))
+    x = listi[index]
+    y = 0 if index+1 == len(listi) else listi[index+1]
+    temp = [x, y, first, second]
+    first = max(temp)
+    temp.remove(first)
+    second = max(temp)
     return rec_secLarge(listi, index+2, first, second)
