@@ -11,7 +11,6 @@ def fun_carrylessadd(x, y):
     result = ''
     for i in range(len(minStr)):
         result += str(int(minStr[i]) + int(maxStr[i]))[-1]
-        print(i, result,)
-        if i < len(maxStr):
-            result += maxStr[i+1:]
+    if i < len(maxStr):
+        result += maxStr[i+1:]
     return int(result[::-1])
