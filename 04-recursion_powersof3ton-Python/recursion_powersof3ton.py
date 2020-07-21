@@ -11,13 +11,12 @@ def recursion_powersof3ton(n):
         return None
     elif n == 1:
         return [1]
-        l = rec_power3(n, [])
-        l.sort()
-        return l
+        return rec_power3(n, [])
 
 
 def rec_power3(n, listi):
     if n < 1:
+        listi.sort()
         return listi
     # converting if decimal to int
     n = int(n // 1)
