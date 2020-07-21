@@ -18,5 +18,5 @@ def fun_matrixmultiply(m1, m2):
         for j in range(c2):
             # rows of m2
             for k in range(r2):
-                result[i][j] += m1[i][k] + m2[k][j]
+                result[i][j] += m1[i][k] * m2[k][j]
     return result
