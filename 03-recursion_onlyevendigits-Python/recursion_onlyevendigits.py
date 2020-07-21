@@ -16,11 +16,12 @@ def fun_recursion_onlyevendigits(l):
 def rec_onlyEven(listi, index):
     if index == len(listi):
         return listi
-    temp, position = listi[index], 0
+    temp, position, temp1 = listi[index], 0, 0
     while temp > 0:
         d = temp % 10
-        if d % 2 != 0:
-            listi[index] -= d * (10 ** position)
-        position += 1
+        if d % 2 == 0:
+            temp1 += d * (10 ** position)
+            position += 1
         temp = temp // 10
+        listi[index] = temp1
     return(listi, index+1)
