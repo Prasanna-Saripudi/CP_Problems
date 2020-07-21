@@ -22,6 +22,7 @@ def rec_onlyEven(listi, index):
         if d % 2 == 0:
             temp1 += d * (10 ** position)
             position += 1
+            print(temp1)
         temp = temp // 10
-        listi[index] = temp1
-    return(listi, index+1)
+    listi[index] = temp1
+    return rec_onlyEven(listi, index+1)
