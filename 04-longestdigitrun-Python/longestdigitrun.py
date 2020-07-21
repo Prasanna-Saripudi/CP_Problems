@@ -9,12 +9,15 @@
 def longestdigitrun(n):
     nStr = str(abs(n))
     start, end, max, i, count = 0, 0, 0, 0, 0
-    while i < len(nStr):
-        while nStr[start] == nStr[end]:
+    while end < len(nStr):
+        while end < len(nStr) and nStr[start] == nStr[end]:
             end += 1
         if end - start > count:
             max = nStr[start]
+            count = end-start
         elif end - start == count:
             max = min(max, nStr[start])
-        start, i = end, end
-    return max
+        if end == len(nStr):
+            break
+        start = end
+    return int(max)
