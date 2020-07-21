@@ -11,7 +11,7 @@ def recursion_powersof3ton(n):
         return None
     elif n == 1:
         return [1]
-        return rec_power3(n, [])
+    return rec_power3(n, [])
 
 
 def rec_power3(n, listi):
@@ -22,7 +22,6 @@ def rec_power3(n, listi):
     n = int(n // 1)
     # if we dont know the power of a number like 6^? = 36 , then wee can find that value using logs
     # log(base 6)36 = 2 ., also 6^2=36
-    if math.isclose(math.log(n, 3), n):
-        print(n)
+    if math.isclose(3**int(math.log(n, 3)), n):
         listi.append(n)
     return rec_power3(n - 1, listi)
