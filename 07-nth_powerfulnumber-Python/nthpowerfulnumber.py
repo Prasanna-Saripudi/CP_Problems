@@ -10,27 +10,28 @@ import math
 def nthpowerfulnumber(n):
     count, value = 0, 1
     while count < n:
-        flag = True
         value += 1
-        for i in primeFactors(n):
-            if n % i != 0 or n % (i * i) != 0:
-                flag = False
-                break
-        if flag:
+        if primeFactors(value):
             count += 1
     return value
 
 
 def primeFactors(num):
     # finding all the prime factors
-    pFactrs = set()
+    deg = 0
     while num % 2 == 0:
-        pFactrs.add(2)
-        num = num // 2
-    for i in range(2, int(math.sqrt(num)) + 1, 2):
+        deg += 1
+        num //= 2
+    if deg == 1:
+        return False
+    for i in range(3, int(math.sqrt(num)) + 1, 2):
+        deg = 0
         while num % i == 0:
-            pFactrs.add(i)
+            deg += 1
             num = num // i
-    if num > 2:
-        pFactrs.add(num)
-    return list(pFactrs)
+        if deg == 1:
+            return False
+        # since primes cant have prime factors., this is
+        # just to make sure that num isnt the same after checking for prime factors
+    # prime number will be the same after all this, but else it would be 1
+    return num == 1
