@@ -24,4 +24,5 @@ def fun_nth_kaprekarnumber(n):
             sum_parts = sqr / split_val + sqr % split_val
             if sum_parts == value:
                 count += 1
+                break
     return value
