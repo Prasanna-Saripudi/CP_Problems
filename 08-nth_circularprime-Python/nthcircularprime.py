@@ -13,7 +13,7 @@ def nthcircularprime(n):
     while count < n:
         value += 1
         if isCircularPrime(value):
-            # print(value)
+            print(value, count)
             count += 1
     return value
 
