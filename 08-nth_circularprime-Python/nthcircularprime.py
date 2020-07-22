@@ -11,6 +11,7 @@ def nthcircularprime(n):
     while count < n:
         value += 1
         if isCircularPrime(value):
+            print(value)
             count += 1
     return value
 
