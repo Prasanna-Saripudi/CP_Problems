@@ -9,7 +9,7 @@ def fun_nth_uglynumber(n):
     count, value = 0, 1
     while count < n:
         value += 1
-        if primeFactors(num):
+        if primeFactors(value):
             count += 1
     return value
 
