@@ -38,6 +38,6 @@ def isPrime(num):
     elif num <= 1 or num % 2 == 0 or num % 3 == 0:
         return False
     for i in range(5, int(math.sqrt(num))+1, 6):
-        if num % i == 0:
+        if num % i == 0 or num % (i+2) == 0:
             return False
     return True
