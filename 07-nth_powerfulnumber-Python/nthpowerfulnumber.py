@@ -27,7 +27,7 @@ def primeFactors(num):
     while num % 2 == 0:
         pFactrs.add(2)
         num = num // 2
-    for i in ramge(2, int(math.sqrt(num)) + 1, 2):
+    for i in range(2, int(math.sqrt(num)) + 1, 2):
         while num % i == 0:
             pFactrs.add(i)
             num = num // i
