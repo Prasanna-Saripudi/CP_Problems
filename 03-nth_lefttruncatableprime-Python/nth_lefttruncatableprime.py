@@ -18,11 +18,13 @@ def fun_nth_lefttruncatableprime(n):
 
 def isLeftTruncPrime(num):
     numStr = str(num)[::-1]
+    # checking if 0 in number
     if '0' in numStr:
         return False
+    # checking if the truncated numbers are primes
     for i in range(len(numStr)):
-        x = int(numStr[:i+1][::-1])
-        print(x)
+        x = int(numStr[: i + 1][::-1])
+        # if not prime, then False
         if not isPrime(x):
             return False
     return True
