@@ -7,8 +7,6 @@
 # and returns the nth Kaprekar number, where as usual we start counting at n==0.
 # author: Prasanna Saripudi
 
-import math
-
 
 def fun_nth_kaprekarnumber(n):
     count, value = 0, 1
@@ -16,6 +14,7 @@ def fun_nth_kaprekarnumber(n):
         value += 1
         sqr = value ** 2
         num_digits, split_count = len(str(sqr)), 0
+        # checking for all possible splits to verify the sum of splits equal to number
         while split_count < num_digits:
             split_count += 1
             split_val = 10 ** split_count
