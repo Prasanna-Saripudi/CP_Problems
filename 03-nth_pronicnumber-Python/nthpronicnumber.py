@@ -5,4 +5,4 @@
 # author: Prasanna Saripudi
 
 def nthpronicnumber(n):
-    return n*n+1
+    return n*(n+1)
