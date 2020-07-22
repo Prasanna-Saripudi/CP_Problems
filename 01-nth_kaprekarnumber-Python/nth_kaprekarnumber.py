@@ -1,13 +1,27 @@
-# Background: a Kaprekar number is a non-negative integer, the representation of whose square 
-# can be split into two possibly-different-length parts (where the right part is not zero) 
-# that add up to the original number again. For instance, 45 is a Kaprekar number, because 
-# 45**2 = 2025 and 20+25 = 45. You can read more about Kaprekar numbers here. The first several 
-# Kaprekar numbers are: 1, 9, 45, 55, 99, 297, 703, 999 , 2223, 2728,... 
-# With this in mind, write the function nthKaprekarNumber(n) that takes a non-negative int n 
+# Background: a Kaprekar number is a non-negative integer, the representation of whose square
+# can be split into two possibly-different-length parts (where the right part is not zero)
+# that add up to the original number again. For instance, 45 is a Kaprekar number, because
+# 45**2 = 2025 and 20+25 = 45. You can read more about Kaprekar numbers here. The first several
+# Kaprekar numbers are: 1, 9, 45, 55, 99, 297, 703, 999 , 2223, 2728,...
+# With this in mind, write the function nthKaprekarNumber(n) that takes a non-negative int n
 # and returns the nth Kaprekar number, where as usual we start counting at n==0.
-
+# author: Prasanna Saripudi
 
 import math
 
+
 def fun_nth_kaprekarnumber(n):
-    return 1;
+    count, value = 0, 1
+    while count < n:
+        value += 1
+        sqr = value ** 2
+        num_digits, split_count = len(str(sqr)), 0
+        while split_count < num_digits:
+            split_count += 1
+            split_val = 10 ** split_count
+            if split_val == value:
+                continue
+            sum_parts = sqr / split_val + sqr % split_val
+            if sum_parts == value:
+                count += 1
+    return value
