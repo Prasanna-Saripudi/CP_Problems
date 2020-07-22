@@ -15,6 +15,7 @@ def nthlychrelnumbers(n):
 
 
 def isLychrel(num):
+    # checks iteratively for palindrome for 25 times, if not lychrel
     for i in range(25):
         num = num + int(str(num)[::-1])
         if num == int(str(num)[::-1]):
