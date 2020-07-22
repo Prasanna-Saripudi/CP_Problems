@@ -21,7 +21,7 @@ def fun_nth_kaprekarnumber(n):
             split_val = 10 ** split_count
             if split_val == value:
                 continue
-            sum_parts = sqr / split_val + sqr % split_val
+            sum_parts = int(sqr / split_val) + (sqr % split_val)
             if sum_parts == value:
                 count += 1
                 break
