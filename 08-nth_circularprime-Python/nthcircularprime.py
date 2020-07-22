@@ -13,7 +13,7 @@ def nthcircularprime(n):
     while count < n:
         value += 1
         if isCircularPrime(value):
-            print(value, count)
+            # print(value, count)
             count += 1
     return value
 
@@ -37,6 +37,7 @@ def isPrime(num):
         return True
     elif num <= 1 or num % 2 == 0 or num % 3 == 0:
         return False
+        # optimizing the prime number checks for eg: 5 , 7 and 9 anyhow is a multipleof 3 ., so += 6
     for i in range(5, int(math.sqrt(num))+1, 6):
         if num % i == 0 or num % (i+2) == 0:
             return False
