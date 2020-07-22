@@ -15,7 +15,7 @@ def fun_nth_carolprime(n):
         x = ((2 ** value - 1) ** 2 - 2)
         if isPrime(x):
             count += 1
-            print(value, x, count)
+            # print(value, x, count)
         value += 1
     return ((2 ** (value-1) - 1) ** 2 - 2)
 
