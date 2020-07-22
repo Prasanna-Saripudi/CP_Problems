@@ -22,6 +22,7 @@ def primeFactors(num):
     while num % 2 == 0:
         deg += 1
         num //= 2
+        # if degree is 1, it means that square of that value isnt dividing, hence False
     if deg == 1:
         return False
     for i in range(3, int(math.sqrt(num)) + 1, 2):
