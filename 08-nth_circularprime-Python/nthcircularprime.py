@@ -33,10 +33,10 @@ def isCircularPrime(num):
 
 
 def isPrime(num):
-    if num <= 1 or num % 2 == 0 or num % 3 == 0:
-        return False
-    elif num == 2 or num == 3:
+    if num == 2 or num == 3:
         return True
+    elif num <= 1 or num % 2 == 0 or num % 3 == 0:
+        return False
     for i in range(5, int(math.sqrt(num))+1, 6):
         if num % i == 0:
             return False
