@@ -7,7 +7,7 @@
 # author: Prasanna Saripudi
 
 def nthcircularprime(n):
-    count, value = 1, 2
+    count, value = 0, 2
     while count < n:
         value += 1
         if isCircularPrime(value):
