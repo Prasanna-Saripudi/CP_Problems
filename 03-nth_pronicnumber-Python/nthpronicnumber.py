@@ -19,6 +19,7 @@ def nthpronicnumber(n):
 
 
 def isPronic(num):
+    # iterates to check if num = product of 2 consec numbers
     for i in range(int(math.sqrt(num))+1):
         if i * (i + 1) == num:
             return True
