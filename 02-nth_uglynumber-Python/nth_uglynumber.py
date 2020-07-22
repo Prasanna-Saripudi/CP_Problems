@@ -15,6 +15,7 @@ def fun_nth_uglynumber(n):
 
 
 def primeFactors(num):
+    # checking if the num has only 2,3,5 as prime factors
     num = divideMax(num, 2)
     num = divideMax(num, 3)
     num = divideMax(num, 5)
