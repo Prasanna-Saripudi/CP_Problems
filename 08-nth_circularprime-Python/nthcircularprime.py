@@ -21,6 +21,7 @@ def isCircularPrime(num):
         numStr = str(num)
         if '0' in numStr:
             return False
+            # checking for all the rotations if prime or not
         for i in range(len(numStr)):
             x = numStr[i:] + numStr[:i]
             if not isPrime(int(x)):
