@@ -6,4 +6,5 @@ from itertools import permutations
 
 
 def getallpermutations(x):
-    return permutations(x)
+    listi = [i for i in permutations(x)]
+    return listi
