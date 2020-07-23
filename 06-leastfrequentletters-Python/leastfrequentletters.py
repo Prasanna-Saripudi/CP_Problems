@@ -13,5 +13,4 @@ def leastfrequentletters(s):
     for i in s:
         if s.count(i) == 1 and i.isalpha():
             result += i
-        result.sort()
     return "" if len(result) == 0 else "".join(sorted(result))
