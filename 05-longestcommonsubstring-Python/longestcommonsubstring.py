@@ -11,14 +11,17 @@
 def longestcommonsubstring(s1, s2):
     if s1 == "" or s2 == "":
         return ""
-    commons = []
+    commons, maxi = [], 0
     minStr, maxStr = min(s1, s2), max(s1, s2)
     for i in range(len(minStr)):
-        j = len(minStr)
+        j = len(minStr)-1
         while j >= 1:
-            print(minStr[i:j])
-            if minStr[i:j] in maxStr:
-                commons.append(minStr[i:j])
+            # print(minStr[i:j])
+            x = minStr[i:j+1]
+            if x in maxStr and len(x) > maxi:
+                commons.append(x)
+                maxi = len(x)
+                print(commons)
             j -= 1
     commons.sort()
     return commons[0]
