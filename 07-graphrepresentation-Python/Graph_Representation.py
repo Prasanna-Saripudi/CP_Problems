@@ -43,6 +43,7 @@ class Graph(object):
 
     def get_edge_list(self):
         edge_list = []
+        # appends the edges with their from, to value to the list
         for edge in self.edges:
             edge_list.append(
                 (edge.value, edge.node_from.value, edge.node_to.value))
@@ -50,10 +51,14 @@ class Graph(object):
 
     def get_adjacency_list(self):
         adjacency_list = [None] * (len(self.edges) + 1)
+        # gets the adjacency matrix written before
         matrix = self.get_adjacency_matrix()
         for i in range(len(matrix)):
+            # iterating through the rows in adj matrix
             l = []
             for j in range(len(matrix[i])):
+                # if matrix row (a node) has edge going from it, then appending the edge value, to node value as tuple
+                # else, if no edges going out from node, None
                 if matrix[i].count(0) != len(self.edges) + 1:
                     if matrix[i][j]:
                         l.append((j, matrix[i][j]))
@@ -66,6 +71,7 @@ class Graph(object):
     def get_adjacency_matrix(self):
         adjacency_matrix = [
             [0 for i in range(len(self.edges) + 1)] for j in range(len(self.edges) + 1)]
+        # iterating throught the edges and filling the matrix with values in the respective from, to position in matrix
         for edge in self.edges:
             adjacency_matrix[edge.node_from.value][edge.node_to.value] = edge.value
         return adjacency_matrix
