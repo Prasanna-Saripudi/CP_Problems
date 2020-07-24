@@ -10,14 +10,15 @@
 # author: Prasanna Saripudi
 
 def fun_nth_carolprime(n):
-    count, value = 0, 3
+    count, value = 0, 2
     while count < n:
         x = ((2 ** value - 1) ** 2 - 2)
-        if isPrime(x):
-            count += 1
-            # print(value, x, count)
+        count += 1
+        # if isPrime(x):
+        #     count += 1
+        # print(value, x, count)
         value += 1
-    return ((2 ** (value-1) - 1) ** 2 - 2)
+    return ((2 ** (value) - 1) ** 2 - 2)
 
 
 def isPrime(num):
