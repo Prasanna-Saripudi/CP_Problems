@@ -21,8 +21,9 @@ def nthcircularprime(n):
 def isCircularPrime(num):
     if isPrime(num):
         numStr = str(num)
-        if '0' in numStr:
-            return False
+        for x in ['0', '2', '4', '6', '8']:
+            if x in numStr:
+                return False
             # checking for all the rotations if prime or not
         for i in range(len(numStr)):
             x = numStr[i:] + numStr[:i]
