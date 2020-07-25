@@ -15,16 +15,13 @@ import java.util.*;
 class longestsubpalindromes {
 	public String fun_longestsubpalindromes(String s){
         int maxL=0,start=0,low=0,high=0;
-        String splain="";
         for(int i=1;i<s.length();i++){
             low = i-1;
             high=i;
             while(low>=0 && high < s.length()&&s.charAt(low)==s.charAt(high)){
-                if(high-low+1>splain.length()){
-                    splain=s.substring(low,high+1);
-                }
-                else if(high-low+1==splain.length() && s.substring(low,high+1).compareTo(splain) <0){
-                    splain=s.substring(low,high+1);
+                if(high-low+1>maxL){
+                    start=low;
+                    maxL=high-low+1;
                 }
                 --low;
                 ++high;
@@ -32,16 +29,15 @@ class longestsubpalindromes {
             low = i-1;
             high=i+1;
             while(low>=0&&high<s.length()&&s.charAt(low)==s.charAt(high)){
-                if(high-low+1>splain.length()){
-    splain=s.substring(low,high+1);
-                }else if(high-low+1==splain.length() && s.substring(low,high+1).compareTo(splain) <0){
-                   splain=s.substring(low,high+1);
+                if(high-low+1>maxL){
+                    start=low;
+                    maxL=high-low+1;
                 }
                 --low;
                 ++high;
             }
         }
-		return splain;
+		return s.substring(start,start+maxL);
     }
     public static void main(String[] args) {
         
