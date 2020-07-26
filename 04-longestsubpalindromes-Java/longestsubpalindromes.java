@@ -14,30 +14,20 @@ import java.util.*;
 
 class longestsubpalindromes {
 	public String fun_longestsubpalindromes(String s){
-        int maxL=0,start=0,low=0,high=0;
-        for(int i=1;i<s.length();i++){
-            low = i-1;
-            high=i;
-            while(low>=0 && high < s.length()&&s.charAt(low)==s.charAt(high)){
-                if(high-low+1>maxL){
-                    start=low;
-                    maxL=high-low+1;
-                }
-                --low;
-                ++high;
-            }
-            low = i-1;
-            high=i+1;
-            while(low>=0&&high<s.length()&&s.charAt(low)==s.charAt(high)){
-                if(high-low+1>maxL){
-                    start=low;
-                    maxL=high-low+1;
-                }
-                --low;
-                ++high;
+        int len = s.length(), count=0;
+        if(len==1) return s;
+        StringBuilder rev = new StringBuilder();
+        rev.append(s);
+        rev=rev.reverse();
+        String palins="";
+        for(int i=0;i<len;i++){
+            for(int j=len-1;j>i;j--){
+                String x= s.substring(i,j+1),y=rev.substring(len-j-1,len-i);
+                if(x.equals(y) && x.length()>palins.length()) palins=x;
+                else if(x.equals(y) && x.length()==palins.length() &&x.compareTo(palins)>0) palins=x;
             }
         }
-		return s.substring(start,start+maxL);
+        return palins;
     }
     public static void main(String[] args) {
         
