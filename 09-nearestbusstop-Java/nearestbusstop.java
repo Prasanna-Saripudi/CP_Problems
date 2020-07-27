@@ -7,7 +7,11 @@
 
 class nearestbusstop {
 	public int fun_nearestbusstop(int street){
-		// your code goes here
-		return -1;
+		int rem = street%8;
+		if(rem==4 || rem<4) return street-rem;
+		return street+8-rem;
+	}
+	public static void main(String[] args) {
+		
 	}
 }
