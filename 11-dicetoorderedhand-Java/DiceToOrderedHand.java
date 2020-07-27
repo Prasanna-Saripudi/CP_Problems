@@ -21,7 +21,7 @@ public class DiceToOrderedHand {
 		int res=0;
 		Arrays.sort(dice, Collections.reverseOrder());
 		for(int x:dice){
-			res += x*10;
+			res = res*10+x;
 		}
 		return res;
 	}	
