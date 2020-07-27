@@ -15,9 +15,6 @@ import java.util.*;
 public class DiceToOrderedHand {
 	public int diceToOrderedHand(int a, int b, int c) {
 		Integer[] dice=new Integer[]{a,b,c};
-		// dice[0]=a;
-		// dice[1]=b;
-		// dice[2]=c;
 		int res=0;
 		Arrays.sort(dice, Collections.reverseOrder());
 		for(int x:dice){
