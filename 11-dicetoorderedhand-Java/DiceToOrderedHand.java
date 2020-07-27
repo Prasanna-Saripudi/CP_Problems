@@ -10,10 +10,21 @@
 // assert(dicetoorderedhand(2,2,2) == 222)
 // Hint: You can use max(a,b,c) to find the largest of 3 values, and
 // min(a,b,c) to find the smallest.
+import java.util.*;
 
 public class DiceToOrderedHand {
 	public int diceToOrderedHand(int a, int b, int c) {
-		// your code goes here
-		return 0;
+		Integer[] dice=new Integer[]{a,b,c};
+		// dice[0]=a;
+		// dice[1]=b;
+		// dice[2]=c;
+		int res=0;
+		Arrays.sort(dice, Collections.reverseOrder());
+		for(int x:dice){
+			res += x*10;
+		}
+		return res;
 	}	
+	public static void main(String[] args) {
+	}
 }
