@@ -6,7 +6,16 @@
 
 class getinrange {
 	public int fun_getinrange(int x, int bound1, int bound2){
-		// Your code goes here
+		int low=bound1,high=bound2;
+		if(bound1> bound2){
+			low=bound2;
+			high=bound1;
+		}
+		if(x>low && x<high) return x;
+		else if(x<low) return low;
+		else if(x>high) return high;
 		return -1;
+	}
+	public static void main(String[] args) {	
 	}
 }
