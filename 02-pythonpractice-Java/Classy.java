@@ -19,5 +19,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Classy {
+    List<String> items;
+    public Classy(){
+    this.items=new ArrayList<String>();
+    }
+
+    public void addItem(String item){
+        this.items.add(item);
+    }
+    public int classiness(){
+        int score=0;
+        for(String item:this.items){
+            if(item=="tophat") score+=2;
+            else if(item=="bowtie") score+=4;
+            else if(item=="monocle") score+=5;
+            else score+=0;
+        }
+        return score;
+    }
+    public static void main(String[] args) {
+        
+    }
 
 }
