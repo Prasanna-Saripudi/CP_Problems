@@ -7,7 +7,16 @@
 
 public class HandToDice {
 	public int[] handToDice(int hand) {
-		// your code goes here
-		return new int[0];
+		String num=Integer.toString(hand);
+		int[] dice=new int[num.length()];
+		int count=num.length();
+		while(hand>0){
+			dice[--count]=hand%10;
+			hand/=10;
+		}
+		return dice;
+	}
+	public static void main(String[] args) {
+		
 	}
 }
